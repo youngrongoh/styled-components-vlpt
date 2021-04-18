@@ -10,6 +10,12 @@ const AppBlock = styled.div`
   padding: 1rem;
 `;
 
+const ButtonGroup = styled.div`
+  & + & {
+    margin-top: 1rem;
+  }
+`;
+
 export default function App() {
   return (
     <ThemeProvider
@@ -22,9 +28,51 @@ export default function App() {
       }}
     >
       <AppBlock>
-        <Button>Button</Button>
-        <Button color="gray">Button</Button>
-        <Button color="pink">Button</Button>
+        <ButtonGroup>
+          <Button size="large">Button</Button>
+          <Button>Button</Button>
+          <Button size="small">Button</Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button color="gray" size="large">
+            Button
+          </Button>
+          <Button color="gray">Button</Button>
+          <Button color="gray" size="small">
+            Button
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button color="pink" size="large">
+            Button
+          </Button>
+          <Button color="pink">Button</Button>
+          <Button color="pink" size="small">
+            Button
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button size="large" outline>
+            Button
+          </Button>
+          <Button color="gray" outline>
+            Button
+          </Button>
+          <Button color="pink" size="small" outline>
+            Button
+          </Button>
+        </ButtonGroup>
+        <ButtonGroup>
+          <Button size="large" fullWidth>
+            Button
+          </Button>
+          <Button color="gray" fullWidth>
+            Button
+          </Button>
+          <Button color="pink" size="small" fullWidth>
+            Button
+          </Button>
+        </ButtonGroup>
       </AppBlock>
     </ThemeProvider>
   );
