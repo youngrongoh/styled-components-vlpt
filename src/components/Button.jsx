@@ -63,7 +63,8 @@ const StyledButton = styled.button`
   color: white;
   font-weight: bold;
   cursor: pointer;
-  padding: auto 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 
   /* 크기 */
   ${sizeStyles}

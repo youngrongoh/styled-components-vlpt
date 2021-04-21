@@ -1,6 +1,7 @@
 import React from "react";
 import styled, { ThemeProvider } from "styled-components";
-import Button from "./components/Buttons";
+import Button from "./components/Button";
+import Dialog from "./components/Dialog";
 
 const AppBlock = styled.div`
   width: 512px;
@@ -27,53 +28,62 @@ export default function App() {
         }
       }}
     >
-      <AppBlock>
-        <ButtonGroup>
-          <Button size="large">Button</Button>
-          <Button>Button</Button>
-          <Button size="small">Button</Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button color="gray" size="large">
-            Button
-          </Button>
-          <Button color="gray">Button</Button>
-          <Button color="gray" size="small">
-            Button
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button color="pink" size="large">
-            Button
-          </Button>
-          <Button color="pink">Button</Button>
-          <Button color="pink" size="small">
-            Button
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button size="large" outline>
-            Button
-          </Button>
-          <Button color="gray" outline>
-            Button
-          </Button>
-          <Button color="pink" size="small" outline>
-            Button
-          </Button>
-        </ButtonGroup>
-        <ButtonGroup>
-          <Button size="large" fullWidth>
-            Button
-          </Button>
-          <Button color="gray" fullWidth>
-            Button
-          </Button>
-          <Button color="pink" size="small" fullWidth>
-            Button
-          </Button>
-        </ButtonGroup>
-      </AppBlock>
+      <>
+        <AppBlock>
+          <ButtonGroup>
+            <Button size="large">Button</Button>
+            <Button>Button</Button>
+            <Button size="small">Button</Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button color="gray" size="large">
+              Button
+            </Button>
+            <Button color="gray">Button</Button>
+            <Button color="gray" size="small">
+              Button
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button color="pink" size="large">
+              Button
+            </Button>
+            <Button color="pink">Button</Button>
+            <Button color="pink" size="small">
+              Button
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button size="large" outline>
+              Button
+            </Button>
+            <Button color="gray" outline>
+              Button
+            </Button>
+            <Button color="pink" size="small" outline>
+              Button
+            </Button>
+          </ButtonGroup>
+          <ButtonGroup>
+            <Button size="large" fullWidth>
+              Button
+            </Button>
+            <Button color="gray" fullWidth>
+              Button
+            </Button>
+            <Button color="pink" size="small" fullWidth>
+              Button
+            </Button>
+          </ButtonGroup>
+        </AppBlock>
+        <Dialog
+          title="정말로 삭제하시겠습니까?"
+          confirmText="삭제"
+          cancelText="취소"
+        >
+          데이터를 정말로 삭제하시겠습니까?
+        </Dialog>
+      </>
     </ThemeProvider>
   );
 }
